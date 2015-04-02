@@ -1,0 +1,14 @@
+[                   
+  {"name":"session", "class":"int", "min":1000000000, "max":2000000000},
+  {"name":"category", "class":"string", "dist":{"business":0.25, "student":0.25, "personal":0.5}},
+  {"name":"state", "class":"state"},
+  {"name":"browser", "class":"browser"},
+  {"name":"language", "class":"language"},
+  {"name":"os", "class":"os"},
+  {"name":"id", "class":"int", "min":0, "max":9999},
+  {"name":"prod_cat", "class":"string", "dist":{"server":0.05, "laptop":0.25, "desktop":0.25, "tablet":0.25, "mobile":0.20}},
+  {"name":"ad_id", "class":"int", "min":1, "max":19},
+  {"name":"purch_flag", "class":"string", "dist":{"false":0.90, "true":0.10 }}
+    
+]
+

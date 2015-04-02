@@ -1,0 +1,10 @@
+[
+  {"name":"timestamp", "class":"date", "format":"MM/dd/yyyy_HH:mm:ss"},
+  {"name":"cust_id", "class":"foreign-key", "size":9999},
+  {"name":"referrer", "class":"string", "dist":{"google":0.30, "facebook":0.25, "yahoo":0.15, "bing":0.10, "twitter":0.05, "youtube":0.15 }},
+  {"name":"prod_id", "class":"foreign-key", "size":3000},
+  {"name":"browser", "class":"string", "dist":{"iexplorer":0.20, "firefox":0.33, "chrome":0.38, "safari":0.06, "opera":0.03 }},
+  {"name":"camp_id", "class":"foreign-key", "size":19},
+  {"name":"purch_flag", "class":"string", "dist":{"false":0.90, "true":0.10 }}
+
+]

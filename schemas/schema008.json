@@ -1,0 +1,7 @@
+[
+    {
+        "name": "y",
+        "class": "lookup",
+        "file": "test.json"
+    }
+]

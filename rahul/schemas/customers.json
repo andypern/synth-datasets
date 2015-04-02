@@ -1,0 +1,10 @@
+[
+  {"name":"cust_id", "class":"foreign-key", "size":9999},
+  {"name":"name", "class":"name", "type":"first_last"},
+  {"name":"state", "class":"state"},
+  {"name":"zip", "class":"int", "min":1, "max":99999},
+  {"name":"gender", "class":"string", "dist":{"MALE":0.5, "FEMALE":0.5, "OTHER":0.02}},
+  {"name":"age", "class":"string", "dist":{"15-20":0.25, "21-25":0.25, "26-35":0.25, "36-50":0.125, "51-100":0.125}},
+  {"name":"agg_rev", "class":"string", "dist":{"0-100":0.25, "101-500":0.25, "501-1000":0.25, "1001-3000":0.125, "3001-100000":0.125}},
+  {"name":"membership", "class":"string", "dist":{"basic":0.25, "silver":0.5, "gold":0.25}}
+]

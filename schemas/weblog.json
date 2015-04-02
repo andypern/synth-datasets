@@ -1,0 +1,11 @@
+[                   
+  {"name":"cust_id", "class":"foreign-key", "size":9999},
+  {"name":"timestamp", "class":"date", "format":"MM/dd/yyyy_HH:mm:ss"},
+  {"name":"zip", "class":"int", "min":1, "max":99999},
+  {"name":"prod_id", "class":"foreign-key", "size":3000},
+  {"name":"device", "class":"string", "dist":{"IOS5":0.90, "IOS6":0.10, "IOS7":0.10, "AOS4.2":0.10, "AOS4.3":0.10, "AOS4.4":0.10 }},
+  {"name":"camp_id", "class":"foreign-key", "size":19},
+  {"name":"purch_flag", "class":"string", "dist":{"false":0.90, "true":0.10 }}
+    
+]
+

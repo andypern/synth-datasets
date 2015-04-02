@@ -1,0 +1,6 @@
+[
+    {"prod_id": 1, "name": "s4", "cat": "phone", "cost": 599},
+    {"prod_id": 2, "name": "iphone", "cat": "phone", "cost": 699},
+    {"prod_id": 3, "name": "mophie", "cat": "accessory", "cost": 99}
+]
+

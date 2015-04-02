@@ -1,0 +1,6 @@
+[                   
+  {"name":"date", "class":"date", "format":"MM/dd/yyyy"},
+  {"name":"datetime", "class":"date", "format":"MM/dd/yyyy_HH:mm:ss"}
+    
+]
+

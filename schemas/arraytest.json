@@ -1,0 +1,9 @@
+[
+ {"name":"id", "class":"id"},
+ {"name": "stuff", "class": "map", "value": [
+   {"name": "a", "class": "int", "min": 3, "max": 5},
+   {"name":"array", "class":"sequence", "length":4,
+     "base": { "class": "word" }
+   }
+ ] }
+]

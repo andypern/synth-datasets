@@ -1,0 +1,10 @@
+[                   
+  {"name":"rowkey", "class":"int", "min":700000, "max":800000},
+  {"name":"id", "class":"int", "min":10000, "max":20000},
+  {"name":"name", "class":"name", "type":"first_last"},
+  {"name":"gender", "class":"string", "dist":{"MALE":0.5, "FEMALE":0.5, "OTHER":0.02}},
+  {"name":"address", "class":"address"},
+  {"name":"first_visit", "class":"date", "format":"MM/dd/yyyy"}
+    
+]
+
