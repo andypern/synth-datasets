@@ -5,7 +5,7 @@
     {"name":"cust_id", "class":"int", "min":1001,"max":5000},
     {"name":"prod_id", "class": "foreign-key", "size":949, "skew":1},
     {"name":"order_total", "class":"int", "min":7, "max":100},
- {
+{"name":"dorkface", "class":"flatten","value": {
         "name": "z",
         "class": "zip",
         "seed": 12,
@@ -14,4 +14,5 @@
         "onlyContinental": "true",
         "fields": "zip,latitude,longitude"
     }
+}
 ]
