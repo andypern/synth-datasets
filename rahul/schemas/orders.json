@@ -12,6 +12,6 @@
         "latitudeFuzz": 1,
         "longitudeFuzz": 1,
         "onlyContinental": "true",
-        "fields": "zip,state,latitude,longitude"
+        "fields": "zip,latitude,longitude"
     }
 ]
