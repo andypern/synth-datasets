@@ -14,5 +14,4 @@
         "onlyContinental": "true",
         "fields": "zip,latitude,longitude"
     }
-}
 ]
