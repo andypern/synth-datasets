@@ -26,7 +26,7 @@
         "fields": "latitude"
     },
 {
-        "name": "long",
+        "name": "longtude",
         "class": "zip",
         "seed": 12,
         "latitudeFuzz": 1,
