@@ -8,6 +8,7 @@
         "latitudeFuzz": 1,
         "longitudeFuzz": 1,
         "onlyContinental": "true",
+		"verbose": "false",
         "fields": "zip,latitude,longitude"
     },
   {"name":"gender", "class":"string", "dist":{"MALE":0.5, "FEMALE":0.5, "OTHER":0.02}},
