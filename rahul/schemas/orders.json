@@ -6,13 +6,33 @@
     {"name":"prod_id", "class": "foreign-key", "size":949, "skew":1},
     {"name":"order_total", "class":"int", "min":7, "max":100},
 {
-        "name": "z",
+        "name": "zip",
         "class": "zip",
         "seed": 12,
         "latitudeFuzz": 1,
         "longitudeFuzz": 1,
         "onlyContinental": "true",
 		"verbose": "false",
-        "fields": "zip,latitude,longitude"
+        "fields": "zip"
+    },
+{
+        "name": "lat",
+        "class": "zip",
+        "seed": 12,
+        "latitudeFuzz": 1,
+        "longitudeFuzz": 1,
+        "onlyContinental": "true",
+        "verbose": "false",
+        "fields": "latitude"
+    },
+{
+        "name": "long",
+        "class": "zip",
+        "seed": 12,
+        "latitudeFuzz": 1,
+        "longitudeFuzz": 1,
+        "onlyContinental": "true",
+        "verbose": "false",
+        "fields": "longitude"
     }
 ]
