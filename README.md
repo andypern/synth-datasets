@@ -10,9 +10,9 @@ Here are some datasets I made for my buddy rahul.
 
 ####orders.schema
 
-this will make ~ XGB of JSON data (which will wind up being ~5GB of CSV): (perhaps it makes sense to use the threads option..)
+this will make ~ XGB of JSON data (which will wind up being ~5GB of CSV). Note the -threads and -output options.
 
-	java -cp ../log-synth/target/log-synth-0.1-SNAPSHOT-jar-with-dependencies.jar com.mapr.synth.Synth -count 61M -schema rahul/schemas/orders.json -format JSON > ../drill/orders.json
+	java -cp ../log-synth/target/log-synth-0.1-SNAPSHOT-jar-with-dependencies.jar com.mapr.synth.Synth -output ../drill/threads -threads 50 -count 70M -schema rahul/schemas/orders.json -format JSON
 
 this will produce output similar to:
 
@@ -21,12 +21,18 @@ this will produce output similar to:
 	{"order_id":1092,"month":"January","date":"2014-01-15 09:02:34","cust_id":3063,"prod_id":660,"order_total":26,"z":{"zip":"27690","longitude":"-78.6372","latitude":"36.0165"}}
 	{"order_id":1093,"month":"January","date":"2014-01-28 20:37:48","cust_id":
 	
+Note that it will make 50 files of ~ 240MBytes each.  To make life easier for drill:
+
+	for i in `ls`;do mv $i $i.json;done;
+
+
+	
 
 Now, lets have drill turn the output into CSV (since the CSV output option from log-synth will still leave JSON in the mix because of the zip code information):
 
 sql:
 
-	create or replace view ord_view as select t.order_id as order_id,t.`month` as `month`, t.`date` as ord_date, t.cust_id as cust_id, t.prod_id as prod_id, t.order_total as order_total, t.z.zip as zipcode, t.z.longitude as longitude, t.z.latitude as latitude from `orders.json` t
+	create or replace view ord_view as select t.order_id as order_id,t.`month` as `month`, t.`date` as ord_date, t.cust_id as cust_id, t.prod_id as prod_id, t.order_total as order_total, t.z.zip as zipcode, t.z.longitude as longitude, t.z.latitude as latitude from `threads` t
 	
 	
 query it to make sure it looks right:
@@ -53,5 +59,23 @@ Exit sqlline and make a file called 'runme.sql' containing:
 now run sqlline:
 
 	sqlline --run=runme.sql --outputformat=csv > test.csv
+	
+that's one big hurk'in CSV file, probably makes sense to split it up, how about 1mm lines per file? (70 files)
+
+	split -l 1000000 test.csv drill/threads/csv/orders.segment
+	
+then this again:
+
+	for i in `ls`;do mv $i $i.csv;done;
+	
+Perhaps we should take the quotes away?:
+
+	for i in `ls`;do sed -r -i 's/\x27//g' $i;done;
+	
+	
+then make a view in sqlline:
+	
+	create or replace view ord_csv_view as select columns[0] as order_id, columns[1] as `month`, columns[2] as ord_date, columns[3] as cust_id, columns[4] as prod_id, columns[5] as ord_total, columns[6] as zip, columns[7] as longitude, columns[8] as latitude from `threads/csv`;
+	
 	
 
