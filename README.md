@@ -32,7 +32,11 @@ Now, lets have drill turn the output into CSV (since the CSV output option from 
 
 sql:
 
-	create or replace view ord_view as select t.order_id as order_id,t.`month` as `month`, t.`date` as ord_date, t.cust_id as cust_id, t.prod_id as prod_id, t.order_total as order_total, t.z.zip as zipcode, t.z.longitude as longitude, t.z.latitude as latitude from `threads` t
+	create or replace view ord_view as 
+	select t.order_id as order_id,t.`month` as `month`, t.`date` as ord_date,
+	t.cust_id as cust_id, t.prod_id as prod_id, t.order_total as order_total,
+	t.zip.zip as zipcode, t.zip.longitude as longitude, t.zip.latitude as latitude 
+	from `rahul/orders` t
 	
 	
 query it to make sure it looks right:

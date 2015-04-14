@@ -10,7 +10,7 @@
         "class": "zip",
         "seed": 12,
         "onlyContinental": "true",
-		"verbose": "true",
+		"verbose": "false",
         "fields": "zip,latitude,longitude" 
     }
 ]
