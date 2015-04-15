@@ -8,7 +8,7 @@
 {
     "name": "z",
     "class": "flatten",
-    "value": { "class": "zip", "fields": "latitude, longitude"}
+    "value": { "class": "zip", "fields": "zip","latitude, longitude"}
 }
 
 ]
