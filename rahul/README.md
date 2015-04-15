@@ -5,7 +5,13 @@ Here are some datasets I made for my buddy rahul.
 
 this will make ~ XGB of JSON data (which will wind up being ~500MB of CSV). Note the -threads and -output options.
 
-	java -cp log-synth/target/log-synth-0.1-SNAPSHOT-jar-with-dependencies.jar com.mapr.synth.Synth -count 7M -threads 50 -schema synth-datasets/rahul/schemas/orders.1week.json -format JSON -output drill/rahul/orders/json
+	java -cp log-synth/target/log-synth-0.1-SNAPSHOT-jar-with-dependencies.jar \
+	 com.mapr.synth.Synth \
+	 -count 7M \
+	 -threads 50 \
+	 -schema synth-datasets/rahul/schemas/orders.1week.json \
+	 -format JSON \
+	 -output drill/rahul/orders/json
 
 this will produce output similar to:
 
