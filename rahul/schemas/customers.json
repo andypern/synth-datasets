@@ -9,7 +9,7 @@
         "longitudeFuzz": 1,
         "onlyContinental": "true",
 		"verbose": "false",
-        "fields": "zip,latitude,longitude"
+        "fields": "zip"
     },
   {"name":"gender", "class":"string", "dist":{"MALE":0.5, "FEMALE":0.5, "OTHER":0.02}},
   {"name":"age", "class":"string", "dist":{"15-20":0.25, "21-25":0.25, "26-35":0.25, "36-50":0.125, "51-100":0.125}},

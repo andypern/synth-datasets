@@ -1,6 +1,0 @@
-[
-  {"name":"prod_id", "class":"foreign-key", "size":9999},
-  {"name":"product", "class":"string"},
-  {"name":"category", "class":"string"},
-  {"name":"price", "class":"int" }
-]
