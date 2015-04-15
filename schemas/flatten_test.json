@@ -1,0 +1,8 @@
+[
+{
+    "name": "z",
+    "class": "flatten",
+    "value": { "class": "zip", "fields": "latitude, longitude"}
+}
+
+]
