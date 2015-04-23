@@ -1,5 +1,5 @@
 [
-  {"name":"cust_id", "class":"foreign-key", "size":50000},
+  {"name":"cust_id", "class":"int", "min":1, "max": 50000},
   {"name":"name", "class":"name", "type":"first_last"},
 {
         "name": "z",
